@@ -10,6 +10,15 @@ class App extends Component{
     }
   }
 
+handleGamePlay = (index) => {
+  alert(index)
+}
+
+
+
+
+
+
   render(){
     return(
       <React.Fragment>
@@ -18,8 +27,10 @@ class App extends Component{
         { this.state.squares.map((value, index) => {
           return (
             <Square
-                value = { value }
-                key = { index }
+                value={ value }
+                key={ index }
+                index={ index }
+                handleGamePlay={ this.handleGamePlay }
             />
           )
         }) }
